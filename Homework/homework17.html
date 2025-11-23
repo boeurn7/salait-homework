@@ -30,16 +30,19 @@
 </head>
 
 <body>
+    <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
         <div class="container-fluid ">
             <a class="navbar-brand" href="#">
                 <img src="../image/Logo.png" alt="Bootstrap" width="50" height="50">
             </a>
+            <!-- hamburger button -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <!-- navigation item list -->
             <div class="collapse navbar-collapse " id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
@@ -69,6 +72,7 @@
                         </ul>
                     </li>
                 </ul>
+                <!-- Search feature -->
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                     <button class="btn btn-outline-success" type="submit">Search</button>
@@ -77,31 +81,154 @@
         </div>
     </nav>
 
+    <!-- Product detail -->
     <div class="container text-center">
         <div class="row ">
-            <div class="col-md-1">
-                <div class="sticky-col ">
+            <!-- Thumbnail content image -->
+            <div class="col-12 col-sm-3 col-md-1 order-2 order-md-1">
+                <div class="sticky-col d-flex flex-row flex-md-column gap-2 overflow-auto ">
                     <img class="thumbnail-img"
                         src="https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_t.png" alt="">
-                    <img class="thumbnail-img" src="https://m.media-amazon.com/images/I/71Bnc7avlIL._AC_SX569_.jpg"
-                        alt="">
-                    <img class="thumbnail-img" src="https://m.media-amazon.com/images/I/71CRrSayTAL._AC_SX569_.jpg"
-                        alt="">
-                    <img class="thumbnail-img" src="https://m.media-amazon.com/images/I/7104sxELiML._AC_SX569_.jpg"
-                        alt="">
-                    <img class="thumbnail-img" src="https://m.media-amazon.com/images/I/61Ly34ygSUL._AC_SX569_.jpg"
-                        alt="">
+                    <img class="thumbnail-img img-fluid"
+                        src="https://m.media-amazon.com/images/I/71Bnc7avlIL._AC_SX569_.jpg" alt="">
+                    <img class="thumbnail-img img-fluid"
+                        src="https://m.media-amazon.com/images/I/71CRrSayTAL._AC_SX569_.jpg" alt="">
+                    <img class="thumbnail-img img-fluid"
+                        src="https://m.media-amazon.com/images/I/7104sxELiML._AC_SX569_.jpg" alt="">
+                    <img class="thumbnail-img img-fluid"
+                        src="https://m.media-amazon.com/images/I/61Ly34ygSUL._AC_SX569_.jpg" alt="">
                 </div>
             </div>
-            <div class="col-md-5">
-                <div class="sticky-col">
+            <!-- Main content image -->
+            <div class="col-md-5 order-1 order-md-2 mb-3">
+                <div class="sticky-col ">
                     <img class="main-img" src="https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_t.png"
                         alt="">
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 order-3 order-md-3">
+                <!-- Product Title -->
                 <h2 style="text-align: start;">Mens Casual Premium Slim Fit T-Shirts</h2>
-                <p style="text-align: start;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint omnis
+                <!-- Product Description -->
+                <!-- Short preview for phones -->
+                <div id="LessDes" class="collapse multi-collapse show d-md-none text-start">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
+                        omnis
+                        aspernatur corporis voluptates, sit vel ipsum inventore ex ratione! Omnis non magni sunt et
+                        tenetur!
+                        Distinctio labore architecto eum dolorem ratione blanditiis, est vel, asperiores voluptate ea
+                        tempore. Maxime sint molestiae tenetur optio laborum. Libero cum voluptatibus voluptatum. Porro
+                        animi ipsum temporibus alias labore repellat incidunt dolorum molestiae dolore. Architecto et ex
+                        accusantium! Animi autem placeat praesentium perferendis voluptatibus soluta ipsa libero nam ea
+                        a
+                        impedit officia, labore, architecto id natus quod quas suscipit eum tenetur fugit maiores
+                        ducimus...
+
+                        <a class="text-primary" data-bs-toggle="collapse" data-bs-target=".multi-collapse"
+                            href="#FullDes" role="button" aria-expanded="true" aria-controls="LessDes FullDes">
+                            Read more
+                        </a>
+                    </p>
+                </div>
+                <!-- Full description for phone -->
+                <div id="FullDes" class="collapse multi-collapse d-md-none text-start">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
+                        omnis
+                        aspernatur corporis voluptates, sit vel ipsum inventore ex ratione! Omnis non magni sunt et
+                        tenetur!
+                        Distinctio labore architecto eum dolorem ratione blanditiis, est vel, asperiores voluptate ea
+                        tempore. Maxime sint molestiae tenetur optio laborum. Libero cum voluptatibus voluptatum. Porro
+                        animi ipsum temporibus alias labore repellat incidunt dolorum molestiae dolore. Architecto et ex
+                        accusantium! Animi autem placeat praesentium perferendis voluptatibus soluta ipsa libero nam ea
+                        a
+                        impedit officia, labore, architecto id natus quod quas suscipit eum tenetur fugit maiores
+                        ducimus
+                        nesciunt quis? Minima iusto, similique mollitia hic adipisci aperiam commodi! Repudiandae nisi
+                        quis,
+                        fuga quas amet voluptas fugit. Necessitatibus error perspiciatis quidem provident? Commodi vero
+                        eligendi quasi sint, alias aliquam. Ducimus a, dolores, optio perferendis quasi facere animi
+                        tempore, aliquam nisi reiciendis aut eum libero distinctio sit odio fugit quas rerum assumenda
+                        ea
+                        illo? Rem reprehenderit explicabo suscipit magnam necessitatibus. Illum, laboriosam
+                        exercitationem
+                        est sint iusto dicta doloribus libero ullam tempore facere quidem culpa iure cupiditate maxime
+                        voluptatibus perferendis aliquid voluptatum accusamus quia officiis maiores assumenda.
+                        Repudiandae
+                        consequuntur harum saepe atque a, dolorem adipisci sed quibusdam minima ipsum et hic asperiores
+                        accusantium amet facilis omnis? Cupiditate temporibus eligendi doloremque, beatae odit ut sint
+                        animi
+                        dolores? Ad voluptatem nihil iusto labore error iure consequatur recusandae harum magni nesciunt
+                        sed
+                        repellendus assumenda vero, facere dolore libero beatae blanditiis eveniet eligendi provident
+                        saepe,
+                        sit repudiandae. Cumque rem nesciunt quaerat iure quibusdam animi. Tenetur aspernatur non illo
+                        facere veniam odit in. Consequatur eum distinctio tempore et aspernatur. Illo ducimus nesciunt
+                        et
+                        sapiente animi voluptates quidem odit sequi eaque asperiores porro culpa esse sunt voluptatem
+                        aut
+                        inventore atque, minima distinctio eum alias. Minus consectetur modi voluptates consequatur
+                        reiciendis illo molestias accusamus ad. Unde ullam nulla quia blanditiis eligendi quaerat
+                        ratione
+                        sed asperiores excepturi odit ut nam quas et sequi itaque explicabo corporis beatae molestiae
+                        architecto consectetur, voluptatibus expedita, recusandae dolorum labore! Beatae dolor eligendi
+                        libero eius, cupiditate sapiente a earum doloremque possimus, ipsum incidunt vitae nostrum
+                        expedita
+                        voluptatum debitis reiciendis vel quo repellat. Dignissimos libero a ducimus animi, eos
+                        voluptatibus
+                        dolorem alias, sapiente autem maxime veniam, perferendis nostrum! Repellat a ipsum quaerat
+                        officiis
+                        minima ipsam blanditiis natus? Quibusdam recusandae blanditiis iure dignissimos facilis! Quaerat
+                        eos
+                        tenetur expedita mollitia rerum voluptatum alias dicta voluptates tempore quis repudiandae porro
+                        ut
+                        esse, in consequuntur repellat nemo repellendus. Expedita quisquam adipisci unde iste. Ullam
+                        saepe
+                        autem illum qui soluta. Deleniti, deserunt non provident ratione saepe fugit, quis praesentium
+                        odio
+                        consequuntur, laboriosam voluptate libero quibusdam. Numquam unde, id aspernatur necessitatibus
+                        quo
+                        eligendi vel veritatis ullam sit quaerat ad labore. Dignissimos omnis ducimus incidunt nemo
+                        quisquam, officiis odit expedita eum earum doloremque sint illo error eveniet. Nam, nobis.
+                        Temporibus, asperiores ducimus corporis fugiat numquam suscipit aliquid ratione dolorum vero.
+                        Nisi
+                        et, explicabo ipsam quod qui ut rerum, hic dolores atque, vel omnis in reiciendis iusto eum
+                        dolorum
+                        doloribus ullam. Animi obcaecati quam incidunt dolor possimus pariatur, et, enim cupiditate fuga
+                        officia vel praesentium tempora, alias veritatis laboriosam. Blanditiis iste quidem quasi rerum
+                        eaque repellat, aspernatur hic iure odio dolores nostrum voluptas ipsam voluptates qui dicta,
+                        debitis mollitia eius magni minus voluptate cum in assumenda! Modi ut reprehenderit odio
+                        pariatur
+                        suscipit, labore ratione necessitatibus amet explicabo libero quisquam corrupti at perspiciatis
+                        consequatur enim doloremque velit iure. Voluptates quisquam commodi facere doloremque eaque,
+                        dolore
+                        officiis laborum aspernatur suscipit alias odit, quod sed quia inventore mollitia, eum maiores
+                        voluptate culpa. Repellat aliquam ipsa debitis? Quis deserunt eius odio consectetur porro quae
+                        ab,
+                        natus asperiores voluptas eos recusandae sed labore blanditiis, esse placeat, odit id fugiat
+                        laborum
+                        repellat provident. Exercitationem natus sequi eveniet totam incidunt laborum amet doloribus,
+                        aspernatur voluptatum cumque perferendis eius ipsa possimus ut sed ex rerum? Nesciunt quaerat
+                        facilis, facere soluta tempora, rem eaque quam eveniet magni doloremque architecto. Aspernatur
+                        dolores pariatur nobis velit soluta commodi eos rem magni doloribus quidem similique, in,
+                        provident
+                        debitis tenetur tempore minus iusto eaque placeat maiores illo assumenda delectus recusandae
+                        voluptatibus quae. Facere laudantium saepe, ad in, beatae impedit dignissimos eligendi nisi
+                        accusantium atque pariatur enim! Nobis nisi perspiciatis aut error! Quibusdam sit mollitia,
+                        ipsum
+                        aperiam quia cupiditate repellat alias quasi, voluptate at fuga porro quis! Officia ea
+                        asperiores
+                        eveniet ducimus unde ipsam exercitationem modi culpa nisi.
+                        <a class="text-primary" data-bs-toggle="collapse" data-bs-target=".multi-collapse"
+                            href="#LessDes" role="button" aria-expanded="false" aria-controls="LessDes FullDes">
+                            Read less
+                        </a>
+                    </p>
+                </div>
+
+                <!-- Full description always visible on desktop -->
+                <p class="d-none d-md-block text-start">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
+                    omnis
                     aspernatur corporis voluptates, sit vel ipsum inventore ex ratione! Omnis non magni sunt et tenetur!
                     Distinctio labore architecto eum dolorem ratione blanditiis, est vel, asperiores voluptate ea
                     tempore. Maxime sint molestiae tenetur optio laborum. Libero cum voluptatibus voluptatum. Porro
@@ -157,7 +284,7 @@
                     aperiam quia cupiditate repellat alias quasi, voluptate at fuga porro quis! Officia ea asperiores
                     eveniet ducimus unde ipsam exercitationem modi culpa nisi.</p>
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary" style="width: 100%; border-radius: 20px;"
+                <button type="button" class="btn btn-primary mt-2" style="width: 100%; border-radius: 20px;"
                     data-bs-toggle="modal" data-bs-target="#exampleModal">
                     Check Out
                 </button>
@@ -165,7 +292,6 @@
 
         </div>
     </div>
-
 
 
     <!-- Modal -->
