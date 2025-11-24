@@ -1,50 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="light">
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Bootstrap Dark Mode Button</title>
-    <!-- Include Bootstrap CSS -->
-    <link href="cdn.jsdelivr.net" rel="stylesheet" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
-<body class="p-5">
-
-    <form>
-    <div class="mb-3">
-        <label for="exampleInputEmail" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail" required>
-    </div>
-    <div class="mb-3">
-        <label for="exampleInputPassword" class="form-label">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword" required>
-    </div>
-    
-    <!-- The Login Button -->
-    <button type="submit" class="btn btn-primary">Login</button>
-</form>
-
-
-    <!-- JavaScript is required for the click functionality -->
-    <script>
-        // Get the button element
-        const themeToggleButton = document.getElementById('theme-toggle-button');
-        // Get the root HTML element
-        const htmlElement = document.documentElement;
-
-        // Add an event listener for when the button is clicked
-        themeToggleButton.addEventListener('click', () => {
-            // Check the current theme attribute value
-            const currentTheme = htmlElement.getAttribute('data-bs-theme');
-            
-            // Toggle the value between 'light' and 'dark'
-            if (currentTheme === 'light') {
-                htmlElement.setAttribute('data-bs-theme', 'dark');
-            } else {
-                htmlElement.setAttribute('data-bs-theme', 'light');
-            }
-        });
-    </script>
-    
-    <!-- Include Bootstrap JS (optional for theme switching) -->
-    <script src="cdn.jsdelivr.net" crossorigin="anonymous"></script>
+<body>
+    <h2>Hello</h2>
 </body>
 </html>
