@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotating 2px Border</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        @keyframes rotate {
+            100% {
+                transform: rotate(1turn);
+            }
+        }
+
+        .rainbow {
+            position: relative;
+            z-index: 0;
+            width: 400px;
+            height: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: sans-serif;
+            font-weight: bold;
+            color: #333; /* Added to make text visible against white background */
+            background-color: transparent; /* Ensures the background of the main element doesn't interfere */
+        }
+
+        /* The rotating color layer (the "border" background) */
+        .rainbow::before {
+            content: "";
+            position: absolute;
+            z-index: -2;
+            left: -50%;
+            top: -50%;
+            width: 200%;
+            height: 200%;
+            background-color: #399953;
+            background-repeat: no-repeat;
+            background-size: 50% 50%, 50% 50%;
+            background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+            background-image: linear-gradient(#14b8a6 , #14b8a6 ),
+                linear-gradient(#ef4444  , #ef4444  ), linear-gradient(#000 , #000 ),
+                linear-gradient(#399953 , #399953 );
+            animation: rotate 4s linear infinite;
+        }
+
+        /* The inner white layer (creates the 2px border gap) */
+        .rainbow::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            /* UPDATED FOR 2PX BORDER */
+            left: 2px; 
+            top: 2px;
+            width: calc(100% - 4px); 
+            height: calc(100% - 4px);
+            /* END UPDATE */
+            background: white;
+            border-radius: 8px; /* Slightly adjusted to match the 10px outer radius better */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="rainbow">
+        Rotating 2px Border
+    </div>
+</body>
+
+</html>
