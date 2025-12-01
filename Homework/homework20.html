@@ -51,10 +51,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            /* font-family: sans-serif; */
-            /* font-weight: bold; */
-            color: #333; /* Added to make text visible against white background */
-            background-color: transparent; /* Ensures the background of the main element doesn't interfere */
+            color: #333;
+            /* Added to make text visible against white background */
+            background-color: transparent;
+            /* Ensures the background of the main element doesn't interfere */
         }
 
         /* The rotating color layer (the "border" background) */
@@ -66,13 +66,12 @@
             top: -50%;
             width: 200%;
             height: 200%;
-            /* background-color: #399953; */
             background-repeat: no-repeat;
             background-size: 50% 50%, 50% 50%;
             background-position: 0 0, 100% 0, 100% 100%, 0 100%;
-            background-image: linear-gradient(#14b8a6 , #14b8a6 ),
-                linear-gradient(#000  , #000  ), linear-gradient(#14b8a6 , #14b8a6 ),
-                linear-gradient(#000 , #000 );
+            background-image: linear-gradient(#14b8a6, #14b8a6),
+                linear-gradient(#ff00ae, #000), linear-gradient(#14b8a6, #14b8a6),
+                linear-gradient(#000, #000);
             animation: rotate 4s linear infinite;
         }
 
@@ -82,22 +81,22 @@
             position: absolute;
             z-index: -1;
             /* UPDATED FOR 2PX BORDER */
-            left: 2px; 
+            left: 2px;
             top: 2px;
-            width: calc(100% - 4px); 
+            width: calc(100% - 4px);
             height: calc(100% - 4px);
             /* END UPDATE */
             background: white;
-            border-radius: 8px; /* Slightly adjusted to match the 10px outer radius better */
+            border-radius: 8px;
+            /* Slightly adjusted to match the 10px outer radius better */
         }
-
     </style>
 </head>
 
 <!-- <body class="min-h-screen animate-pulse-bg"  -->
 <!-- style="background: linear-gradient(135deg, #1c07a5 0%, #03060a 33%, #000000 66%, #0c0349 100%);"> -->
 
-<body class="bg-black">
+<body class="bg-[#000]">
     <!-- Navbar -->
     <nav class="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md shadow-md z-50">
         <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-3">
@@ -125,7 +124,7 @@
 
     <!-- Hero Section -->
     <section class="hero-bg relative flex justify-center items-center h-lvh bg-cover bg-center mt-15"
-        style="background-image: url('https://static.vecteezy.com/ti/vetor-gratis/p1/36055154-digital-pasta-e-documentos-com-conectando-pontos-e-linhas-migracao-arquivo-e-conectado-documento-arquivo-conceito-fundo-ilustracao-vetor.jpg');">
+        style="background-image: url('https://img.freepik.com/free-vector/abstract-blue-light-pipe-speed-zoom-black-background-technology_1142-9980.jpg?semt=ais_hybrid&w=740&q=80');">
 
         <!-- Overlay for better text readability -->
         <div class="absolute inset-0 bg-black/40"></div>
@@ -160,7 +159,7 @@
                     <a href="">រក្សារូបភាព</a>
                 </p>
                 <div class="rainbow border-0 rotate-45 rounded shadow-lg bg-white hover:bg-teal-50 transition">
-                    <img class="w-[200px] h-[200px] -rotate-45 p-10"
+                    <img class="w-[200px] h-[200px] -rotate-45 p-10 hover:cursor-pointer"
                         src="https://img.icons8.com/?size=100&id=sbd6YUnGrltj&format=png&color=2dd4bf" alt="">
                 </div>
             </div>
@@ -169,7 +168,7 @@
             <!-- Item 2 -->
             <div class="flex gap-10 justify-center items-center">
                 <div class="rainbow border-0 rotate-45 rounded shadow-lg bg-white hover:bg-teal-50 transition">
-                    <img class="w-[200px] h-[200px] -rotate-45 p-10"
+                    <img class="w-[200px] h-[200px] -rotate-45 p-10 hover:cursor-pointer"
                         src="https://img.icons8.com/?size=100&id=dsQlw8OAtFsr&format=png&color=2dd4bf" alt="">
                 </div>
                 <p
@@ -186,7 +185,7 @@
                     <a href="">បង្កើតStory</a>
                 </p>
                 <div class="rainbow border-0 rotate-45 rounded shadow-lg bg-white hover:bg-teal-50 transition">
-                    <img class="w-[200px] h-[200px] -rotate-45 p-10"
+                    <img class="w-[200px] h-[200px] -rotate-45 p-10 hover:cursor-pointer"
                         src="https://img.icons8.com/?size=100&id=VKw-NVujHVwa&format=png&color=2dd4bf" alt="">
                 </div>
             </div>
@@ -195,7 +194,7 @@
             <!-- Item 4 -->
             <div class="flex gap-10 justify-center items-center">
                 <div class="rainbow border-0 rotate-45 rounded shadow-lg bg-white hover:bg-teal-50 transition">
-                    <img class="w-[200px] h-[200px] -rotate-45 p-10"
+                    <img class="w-[200px] h-[200px] -rotate-45 p-10 hover:cursor-pointer"
                         src="https://img.icons8.com/?size=100&id=IqtKoskofYlg&format=png&color=2dd4bf" alt="">
                 </div>
                 <p
@@ -207,7 +206,7 @@
     </section>
 
 
-
+    <hr class="text-gray-900">
 
     <section class="py-20">
         <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -242,7 +241,57 @@
         </div>
     </section>
 
-
+    <section class="text-white">
+        <h1 class="text-3xl md:text-4xl font-bold text-teal-500 text-center">ទំនាក់ទំនង</h1>
+        <p class="text-center my-6">សូមទាក់ទងមកកាន់យើង ប្រសិនបើអ្នកមានសំណួរ សំណើ ឬចង់ទាក់ទងជាមួយក្រុមការងាររបស់យើង។
+            យើងរីករាយក្នុងការជួយអ្នកគ្រប់ពេល!</p>
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-top">
+            <div class="flex justify-center items-start flex-col gap-6">
+                <img class="w-full border rounded-[20px] bg-white"
+                    src="https://zenithconventschoolgkp.com/Image/contact-us.png" alt="">
+                <div class="">
+                    <h2 class="text-teal-500 font-semibold text-[20px]">ព័ត៌មានទំនាក់ទំនង</h2>
+                    <hr class="mb-4">
+                    <div class="flex gap-2 justify-start items-center mb-3">
+                        <i data-lucide="map-pin-house"
+                            class="border border-teal-500 rounded-[50%] p-[3px] text-teal-500"></i>
+                        <p class="text-gray-300">អាសយដ្ឋាន៖ ភ្នំពេញ កម្ពុជា</p>
+                    </div>
+                    <div class="flex gap-2 justify-start items-center mb-3">
+                        <i data-lucide="phone-call"
+                            class="border border-teal-500 rounded-[50%] p-[3px] text-teal-500"></i>
+                        <p class="text-gray-300">ទូរស័ព្ទ៖ <span class="text-teal-400">012 345 678</span></p>
+                    </div>
+                    <div class="flex gap-2 justify-start items-center mb-3">
+                        <i data-lucide="mail" class="border border-teal-500 rounded-[50%] p-[3px] text-teal-500"></i>
+                        <p class="text-gray-300">Email៖ <span class="text-teal-400">info@twoway.com</span></p>
+                    </div>
+                </div>
+            </div>
+            <form action="" class="space-y-5">
+                <div>
+                    <label for="">ឈ្មោះ</label>
+                    <input type="text"
+                        class="w-full p-3 bg-[#222] border border-gray-700 rounded-lg focus:border-teal-400 outline-none text-white">
+                </div>
+                <div>
+                    <label for="">ទូរស័ព្ទ</label>
+                    <input type="text"
+                        class="w-full p-3 bg-[#222] border border-gray-700 rounded-lg focus:border-teal-400 outline-none text-white">
+                </div>
+                <div>
+                    <label for="">អ៊ីមែល</label>
+                    <input type="text"
+                        class="w-full p-3 bg-[#222] border border-gray-700 rounded-lg focus:border-teal-400 outline-none text-white">
+                </div>
+                <div>
+                    <label for="">សារ</label>
+                    <textarea name="" id="" rows="8"
+                        class="w-full p-3 bg-[#222] border border-gray-700 rounded-lg focus:border-teal-400 outline-none text-white"></textarea>
+                </div>
+            </form>
+        </div>
+    </section>
 
     <section
         class="flex justify-center items-center my-14 h-[400px] text-center border border-red-300 relative overflow-hidden">
@@ -253,8 +302,6 @@
         </h1>
     </section>
 
-
-
     <footer class="bg-gray-800">
         <!-- Footer Bottom -->
         <div class="border-t border-gray-800 pt-6 text-center text-gray-500 p-6">
@@ -262,7 +309,10 @@
         </div>
     </footer>
 
-
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 
 </html>
