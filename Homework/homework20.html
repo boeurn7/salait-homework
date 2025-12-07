@@ -144,10 +144,10 @@
                     </svg>
                 </button>
 
-                <!-- Button -->
+                <!-- Button login-->
                 <a href="#"><button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal"
-                        class="opacity-0 md:opacity-100 bg-teal-400 text-black font-bold px-5 py-2 rounded-[8px] hover:bg-white hover:text-teal-400 transition">ចូលប្រើ</button></a>
-
+                        class="opacity-0 md:opacity-100 bg-teal-400 text-black font-bold px-5 py-2 rounded-[8px] hover:bg-white hover:text-teal-400 transition">ចូលប្រើ</button>
+                </a>
             </div>
 
 
@@ -554,7 +554,7 @@
         class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full text-white">
         <div class="relative p-4 w-full max-w-md max-h-full">
             <!-- Modal content -->
-            <div class="relative bg-neutral-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
+            <div class="relative bg-neutral-primary-soft border-none rounded-base shadow-sm p-4 md:p-6">
                 <!-- Modal header -->
                 <div class="flex items-center justify-between border-b border-default pb-4 md:pb-5">
                     <h3 class="text-2xl font-bold text-heading">
@@ -573,17 +573,33 @@
                 </div>
                 <!-- Modal body -->
                 <form action="#" class="pt-4 md:pt-6">
-                    <div class="mb-4">
-                        <label for="email" class="block mb-2.5 text-sm font-medium text-heading">អ៊ីមែល</label>
-                        <input type="email" id="email"
-                            class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body"
-                            placeholder="example@company.com" required />
+                    <div class="relative z-0 my-10">
+                        <input type="text" id="floating_standard"
+                            class="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer"
+                            placeholder=" " />
+                        <label for="floating_standard"
+                            class="inline-flex items-center absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+                            <svg class="w-4 h-4 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                                    d="m3.5 5.5 7.893 6.036a1 1 0 0 0 1.214 0L20.5 5.5M4 19h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z" />
+                            </svg>
+                            អ៊ីមែល
+                        </label>
                     </div>
-                    <div>
-                        <label for="password" class="block mb-2.5 text-sm font-medium text-heading">លេខសម្ងាត់</label>
-                        <input type="password" id="password"
-                            class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body"
-                            placeholder="•••••••••" required />
+                    <div class="relative z-0">
+                        <input type="text" id="floating_standard"
+                            class="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer"
+                            placeholder=" " />
+                        <label for="floating_standard"
+                            class="inline-flex items-center absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+                            <svg class="w-4 h-4 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                                    d="m3.5 5.5 7.893 6.036a1 1 0 0 0 1.214 0L20.5 5.5M4 19h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z" />
+                            </svg>
+                            លេខសម្ងាត់
+                        </label>
                     </div>
                     <div class="flex items-start my-6">
                         <div class="flex items-center">
@@ -595,16 +611,121 @@
                         <a href="#"
                             class="ms-auto text-sm font-medium text-fg-brand hover:underline">ភ្លេចលេខសម្ងាត់</a>
                     </div>
+
                     <button type="submit"
                         class="text-white bg-teal-400 box-border rounded hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 text-sm px-4 py-2.5 focus:outline-none w-full mb-3">ចូល</button>
-                    <div class="text-sm font-medium text-body">មិនទាន់មានគណនី? <a href="#"
-                            class="text-teal-400 font-bold hover:underline">បង្កើតគណនីថ្មី</a></div>
+                    <div class="text-sm font-medium text-body">មិនទាន់មានគណនី?
+                        <a href="#" class="text-teal-400 font-bold hover:underline"><button
+                                data-modal-target="signup-modal"
+                                data-modal-toggle="signup-modal" data-modal-hide="authentication-modal">បង្កើតគណនីថ្មី</button></a>
+                    </div>
                 </form>
             </div>
         </div>
     </div>
 
+    <!-- Signup modal -->
+    <div id="signup-modal" tabindex="-1" aria-hidden="true"
+        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full text-white">
+        <div class="relative p-4 w-full max-w-md max-h-full">
+            <!-- Modal content -->
+            <div class="relative bg-neutral-primary-soft border-none rounded-base shadow-sm p-4 md:p-6">
+                <!-- Modal header -->
+                <div class="flex items-center justify-between border-b border-default pb-4 md:pb-5">
+                    <h3 class="text-2xl font-bold text-heading">
+                        ចុះឈ្មោះចូលប្រើប្រព័ន្ធ
+                    </h3>
+                    <button type="button"
+                        class="text-body bg-transparent hover:bg-neutral-tertiary hover:text-heading rounded-base text-sm w-9 h-9 ms-auto inline-flex justify-center items-center"
+                        data-modal-hide="signup-modal">
+                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18 17.94 6M18 18 6.06 6" />
+                        </svg>
+                        <span class="sr-only">Close modal</span>
+                    </button>
+                </div>
+                <!-- Modal body -->
+                <form action="#" class="pt-4 md:pt-6">
+                    <div class="relative z-0 my-10">
+                        <input type="text" id="floating_standard"
+                            class="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer"
+                            placeholder=" " />
+                        <label for="floating_standard"
+                            class="inline-flex items-center absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+                            <svg class="w-4 h-4 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                                    d="m3.5 5.5 7.893 6.036a1 1 0 0 0 1.214 0L20.5 5.5M4 19h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z" />
+                            </svg>
+                            ឈ្មោះ
+                        </label>
+                    </div>
+                    <div class="relative z-0 my-10">
+                        <input type="text" id="floating_standard"
+                            class="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer"
+                            placeholder=" " />
+                        <label for="floating_standard"
+                            class="inline-flex items-center absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+                            <svg class="w-4 h-4 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                                    d="m3.5 5.5 7.893 6.036a1 1 0 0 0 1.214 0L20.5 5.5M4 19h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z" />
+                            </svg>
+                            អ៊ីមែល
+                        </label>
+                    </div>
+                    <div class="relative z-0 my-10">
+                        <input type="text" id="floating_standard"
+                            class="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer"
+                            placeholder=" " />
+                        <label for="floating_standard"
+                            class="inline-flex items-center absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+                            <svg class="w-4 h-4 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                                    d="m3.5 5.5 7.893 6.036a1 1 0 0 0 1.214 0L20.5 5.5M4 19h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z" />
+                            </svg>
+                            លេខសម្ងាត់
+                        </label>
+                    </div>
+                    <div class="relative z-0">
+                        <input type="text" id="floating_standard"
+                            class="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer"
+                            placeholder=" " />
+                        <label for="floating_standard"
+                            class="inline-flex items-center absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+                            <svg class="w-4 h-4 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                                    d="m3.5 5.5 7.893 6.036a1 1 0 0 0 1.214 0L20.5 5.5M4 19h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z" />
+                            </svg>
+                            ផ្ទៀងផ្ទាត់លេខសម្ងាត់
+                        </label>
+                    </div>
+                    <div class="flex items-start my-6">
+                        <div class="flex items-center">
+                            <input id="checkbox-remember" type="checkbox" value=""
+                                class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                            <label for="checkbox-remember"
+                                class="ms-2 text-sm font-medium text-heading">យល់ព្រមគ្រប់លក្ខ័ណប្រព័ន្ធបានកំណត់</label>
+                        </div>
+                        <a href="#"
+                            class="ms-auto text-sm font-medium text-fg-brand hover:underline">អានលក្ខ័ណ</a>
+                    </div>
 
+                    <button type="submit"
+                        class="text-white bg-teal-400 box-border rounded hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 text-sm px-4 py-2.5 focus:outline-none w-full mb-3">បង្កើតគណនី</button>
+                    <div class="text-sm font-medium text-body">មានគណនី?
+                        <a href="#" class="text-teal-400 font-bold hover:underline"><button
+                                data-modal-target="authentication-modal"
+                                data-modal-toggle="authentication-modal" data-modal-hide="signup-modal">ចូលប្រើ</button></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <footer class="w-full bg-neutral-primary-soft text-white bg-gray-900 m-auto mb-12 md:mb-0 md:mt-10">
         <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
