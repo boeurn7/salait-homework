@@ -16,7 +16,7 @@
     <div class="max-w-6xl mx-auto flex justify-between items-center">
       <h1 class="text-2xl font-bold text-gray-700">📦 Product Dashboard</h1>
 
-      <button data-modal-target="crud-modal" data-modal-toggle="crud-modal"
+      <button onclick="openModal(), clearValue(), changeUpdateButton()"
         class="flex items-center gap-2 px-4 py-2 bg-blue-700 hover:bg-blue-800 text-white rounded-lg text-sm">
         Add Product
       </button>
@@ -112,7 +112,7 @@
             <h3 class="text-lg font-semibold text-gray-700">
               Create New Product
             </h3>
-            <button data-modal-hide="crud-modal"
+            <button onclick="closeModal()"
               class="text-gray-400 hover:text-gray-600 hover:bg-gray-200 rounded-lg p-2">
               ✖
             </button>
@@ -177,6 +177,18 @@
     let products = [];
     let productIndex;
 
+    // function to toggle buttons in modal
+    function changeUpdateButton() {
+      addBtn.classList.remove("hidden");
+      updateBtn.classList.add("hidden");
+    }
+
+    function changeAddButton() {
+      addBtn.classList.add("hidden");
+      updateBtn.classList.remove("hidden");
+    }
+
+    // load products from local storage when the page loads
     document.addEventListener("DOMContentLoaded", () => {
       loadFromStorage();
       renderProduct();
@@ -248,16 +260,18 @@
       products[productIndex] = proUpdate;
 
       saveToStorage();
-
       renderProduct();
       clearValue();
+      closeModal();
 
       // Toggle buttons
       addBtn.classList.remove("hidden");
       updateBtn.classList.add("hidden");
     }
 
+    // function to edit a product 
     function editProduct(index) {
+
       const product = products[index];
       console.log("edit product", product);
 
@@ -292,6 +306,8 @@
       renderProduct();
       clearValue();
       saveToStorage();
+
+      closeModal(); // close the modal after adding a product
     }
 
     // function to generate a unique ID for each product
@@ -320,7 +336,7 @@
           <td>${product.category}</td>
           <td>${product.description}</td>
           <td class="px-6 py-4 text-center">
-              <button  onclick="editProduct(${products.indexOf(product)})" class="bg-blue-500 hover:bg-blue-800 text-white px-3 py-1 rounded transition-colors duration-200">Edit</button>
+              <button onclick="editProduct(${products.indexOf(product)}), openModal()" class="bg-blue-500 hover:bg-blue-800 text-white px-3 py-1 rounded transition-colors duration-200">Edit</button>
               <button onclick="deleteProduct(${products.indexOf(product)}) " class="bg-red-500 hover:bg-red-800 text-white px-3 py-1 rounded ml-2 transition-colors duration-200">Delete</button>
             </td>
         `
@@ -339,7 +355,7 @@
 
     function closeModal() {
       const modal = document.getElementById("crud-modal");
-      modal.remove();
+      modal.classList.add("hidden");
     }
 
     function openModal() {
